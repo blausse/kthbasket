@@ -1,0 +1,33 @@
+.global-nav{height:44px;padding: 0 1rem;position: absolute;top: 0;left: 0;width:100%;z-index:10}
+.global-nav-links,.local-nav-links{max-width:1000px;margin:0 auto;display:flex;height:100%;align-items:center}
+.global-nav-links{justify-content: space-between;}
+.global-nav-links a{color:rgba(29,29,31)}
+.local-nav-links .product-name{margin-right:auto;font-size:1.2rem}
+.local-nav-links a {font-size:0.8rem;color:rgba(29,29,31)}
+.local-nav{height:52px;border-bottom:1px solid #ddd;padding: 0 1rem;position: absolute;top: 45px;left: 0;width:100%;z-index: 11;box-shadow: 0 1px 6px rgb(32 33 36 / 100%);}
+.local-nav-sticky .local-nav{position:fixed;top:0;background:rgba(255,255,255,0.1);backdrop-filter:saturate(180%) blur(15px);-webkit-backdrop-filter:saturate(180%) blur(15px);-moz-backdrop-filter:saturate(180%) blur(15px);-o-backdrop-filter:saturate(180%) blur(15px)}
+.local-nav-sticky .local-nav a{color:rgb(29,29,31)}
+.local-nav-sticky .local-nav h1{color:rgb(29,29,31)}
+.local-nav-links a:not(.product-name){margin-left:2em;}
+
+main{max-width:1000px;margin: 97px auto 0}
+
+.footer{display:flex;justify-content: center;height: 200px;;background: #222;color:white;position: relative;margin:auto}
+.footer-box{max-width:1000px;height:150px;display:flex;flex-direction:column}
+.footer ul li a{color:white}
+.footer-menu{display:flex;justify-content: space-between;width:100%;box-sizing: border-box;padding:1rem 1rem 0 1rem;font-size:1rem}
+.footer-column{display:flex;flex-direction:column;justify-content: space-evenly;width:100%;}
+.footer-term{display:flex;width:80%;height:20px;box-sizing: border-box;justify-content: space-between;margin:auto;font-size:0.9rem}
+.social-link{display:flex;width:80%;box-sizing: border-box;padding:0 1rem;margin:20px auto 0;justify-content: space-between;text-align:center;align-items: center;}
+.footer-logo{position: absolute;bottom: 0;width:100%;box-sizing: border-box;text-align:center;padding-bottom:1rem}
+.social-icon{width:30%;height:30%;fill:white}
+
+html{font-family:'noto sans kr',sans-serif;font-size:14px;}
+body{color:rgb(29, 29, 31);letter-spacing:-0.05em;background: white;}
+p{line-height:1.6;}
+a{color: rgb(29, 29, 31);text-decoration: none;}
+@media(min-width:1024px){
+	.footer-menu{font-size:1.5rem}
+	.footer-term{font-size:1.2rem;margin-top:20px;}
+	.footer{height:250px}
+}
