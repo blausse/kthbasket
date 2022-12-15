@@ -162,35 +162,6 @@
 		}
 	}
 
-	// Scene 2 이미지 로드
-	// function loadImagesOfScene2() {
-	// 	if (sceneInfo[2].finishedLoadingImages) return;
-
-	// 	let numberOfLoadedImages = 0;
-	// 	for (let i = 0; i < sceneInfo[2].values.videoImageCount; i++) {
-	// 		let imgElem = new Image();
-	// 		imgElem.src = `./video/002/IMG_${7027 + i}.JPG`;
-	// 		imgElem.addEventListener('load', () => {
-	// 			scene2Images.push(imgElem);
-	// 			numberOfLoadedImages++;
-
-	// 			totalImages++;
-				
-	// 			if (numberOfLoadedImages === sceneInfo[2].values.videoImageCount) {
-	// 				// 해당 씬의 이미지가 모두 로도되었으면
-	// 				sceneInfo[2].finishedLoadingImages = true;
-	// 				console.log(`scene 2 이미지 로드 완료`)
-	// 				console.log(`로드된 이미지 총개수: ${totalImages}`);
-	// 				setImagesOfScene2();
-	// 				initAfterLoadImages();
-
-	// 				if (!sceneInfo[0].finishedLoadingImages) {
-	// 					loadImagesOfScene0();
-	// 				}
-	// 			}
-	// 		});
-	// 	}
-	// }
 
 	function getImageNumber(str) {
 		const newStr = str.substring(
@@ -274,26 +245,7 @@
 				currentScene = i;
 				break;
 			}
-	// function setLayout() {
-	// 	// 각 스크롤 섹션의 높이 세팅
-	// 	for (let i = 0; i < sceneInfo.length; i++) {
-	// 		if (sceneInfo[i].type === 'sticky') {
-	// 			sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
-	// 		} else if (sceneInfo[i].type === 'normal')  {
-	// 			sceneInfo[i].scrollHeight = sceneInfo[i].objs.content.offsetHeight + window.innerHeight * 0.5;
-	// 		}
-    //         sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
-	// 	}
 
-	// 	yOffset = window.pageYOffset;
-
-	// 	let totalScrollHeight = 0;
-	// 	for (let i = 0; i < sceneInfo.length; i++) {
-	// 		totalScrollHeight += sceneInfo[i].scrollHeight;
-	// 		if (totalScrollHeight >= yOffset) {
-	// 			currentScene = i;
-	// 			break;
-	// 		}
 		}
 		document.body.setAttribute('id', `show-scene-${currentScene}`);
 
@@ -427,47 +379,6 @@
 				objs.pencil.style.bottom = `${calcValues(values.pencil_bottom, currentYOffset)}%`;
 				objs.pencil.style.transform = `rotate(${calcValues(values.pencil_rotate, currentYOffset)}deg)`;
 
-				// if (scrollRatio <= 0.5) {
-				// 	// in
-				// 	objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset);
-				// } else {
-				// 	// out
-				// 	objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
-				// }
-
-				// if (scrollRatio <= 0.32) {
-				// 	// in
-				// 	objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
-				// 	objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_in, currentYOffset)}%, 0)`;
-				// } else {
-				// 	// out
-				// 	objs.messageA.style.opacity = calcValues(values.messageA_opacity_out, currentYOffset);
-				// 	objs.messageA.style.transform = `translate3d(0, ${calcValues(values.messageA_translateY_out, currentYOffset)}%, 0)`;
-				// }
-
-				// if (scrollRatio <= 0.67) {
-				// 	// in
-				// 	objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_in, currentYOffset)}%, 0)`;
-				// 	objs.messageB.style.opacity = calcValues(values.messageB_opacity_in, currentYOffset);
-				// 	objs.pinB.style.transform = `scaleY(${calcValues(values.pinB_scaleY, currentYOffset)})`;
-				// } else {
-				// 	// out
-				// 	objs.messageB.style.transform = `translate3d(0, ${calcValues(values.messageB_translateY_out, currentYOffset)}%, 0)`;
-				// 	objs.messageB.style.opacity = calcValues(values.messageB_opacity_out, currentYOffset);
-				// 	objs.pinB.style.transform = `scaleY(${calcValues(values.pinB_scaleY, currentYOffset)})`;
-				// }
-
-				// if (scrollRatio <= 0.93) {
-				// 	// in
-				// 	objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_in, currentYOffset)}%, 0)`;
-				// 	objs.messageC.style.opacity = calcValues(values.messageC_opacity_in, currentYOffset);
-				// 	objs.pinC.style.transform = `scaleY(${calcValues(values.pinC_scaleY, currentYOffset)})`;
-				// } else {
-				// 	// out
-				// 	objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}%, 0)`;
-				// 	objs.messageC.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
-				// 	objs.pinC.style.transform = `scaleY(${calcValues(values.pinC_scaleY, currentYOffset)})`;
-				// }
 
 				// currentScene 3에서 쓰는 캔버스를 미리 그려주기 시작
 				if (scrollRatio > 0.9) {
