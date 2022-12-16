@@ -22,23 +22,38 @@ main{max-width:1000px;background: #f5e5cb;width:100%;height:2000px;box-sizing: b
 .info{padding:0 1rem;box-sizing: border-box;margin: 0 auto 3rem;}
 .icon-caption{display:flex;flex-direction:column;justify-content: center;align-items: center;color:white}
 .icon-caption span{margin-top:0.3rem;min-width:60px;text-align: center;}
-.status{width:100%;box-sizing: border-box;padding:0 1rem;}
+.status{width:100%;box-sizing: border-box;padding:1rem;}
 .menu{display:flex;}
 .menu button{padding:1rem;background: #f54748;border-radius:20px;font-size:1.2rem;color:#fff;margin: 1rem 2rem 1rem 0}
 .menu button:hover{background: #000;}
-.content{height:300px;background: #fff;border-radius:20px;margin-bottom:1rem;}
+.content>div h3{margin-bottom:1rem}
+.content{height:auto;background: #fff;border-radius:20px;margin-bottom:1rem;}
+.title{font-size:1.3rem;display:block;width:50%}
+.status .class p{display:flex;align-items: center;width:100%}
+.desc{display:block;line-height:1.3rem;margin-right:auto}
+.payment, .monthly-report{display:none}
+.status .payment p{display:flex;align-items: center;width:100%}
+.btn-box{display: flex;margin-top:1rem}
+.cancel{margin-left:auto;padding:1rem;background: #ddd;border-radius:20px}
+.renew{padding:1rem;background:#6d33ff;color:white;border-radius:20px;margin-left:10px}
+.monthly-report ul{display:flex;flex-wrap:wrap}
+.monthly-report button:hover{color:blue}
+.monthly-report button{margin-bottom:0.5rem}
+.report{display:none}
 
 .classList{padding:0 1rem;margin-bottom:1rem}
 .classList h2{margin-bottom:1rem}
 .classList .list{display:flex;flex-wrap:nowrap;overflow:scroll}
-.list li a{display:block;width:120px; height:80px;background: #fff;margin-right:1rem;border-radius:20px}
-::-webkit-scrollbar {display: none; }
+.list li{display:flex;align-items: center;justify-content: center;}
+.list li a{display:block;width:120px; height:80px;background: #fff;margin-right:1rem;border-radius:20px;text-align: center;line-height:80px}
+::-webkit-scrollbar {display: none;}
 
 .attend{padding:0 1rem;}
 .chat{padding:0 1rem;}
 
 .footer{position:fixed;bottom:0;left:0;width:100%;height:100px;background: white;border-top:1px solid #ddd}
 .footer .box{display:flex;justify-content: space-between;padding:0 1rem;box-sizing: border-box;align-items: center;height:100%;width:100%;max-width: 1000px;margin:auto}
+.footer .box a{display:flex;flex-direction:column;align-items: center;}
 .footer .box .icon{fill:rgb(29, 29, 31);width:30px;height:30px}
 
 html{font-size:14px;}

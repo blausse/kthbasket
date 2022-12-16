@@ -1,11 +1,11 @@
 $(function(){
 $('.open').click(function(){
-    $('.gnb').slideDown();
+    $('.gnb').stop().slideDown();
     $('.open').hide();
     $('.close').show();
 })
 $('.close').click(function(){
-    $('.gnb').slideUp();
+    $('.gnb').stop().slideUp();
     $('.open').show();
     $('.close').hide();
 })

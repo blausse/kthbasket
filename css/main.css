@@ -51,6 +51,7 @@ body.before-load{overflow:hidden;}
 .social-icon{width:30%;height:30%;fill:white}
 .sticky-elem{position:fixed;left:0;width:100%;display:none}
 .footer .icon{width:30px;height:30px;fill:rgb(29, 29, 31)}
+.footer .box a{display:flex;flex-direction:column;align-items: center;}
 .icon{width:30px;height:30px;fill:white}
 
 
