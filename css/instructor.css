@@ -10,25 +10,18 @@
 .gnb ul li a:hover{font-size:1.4rem}
 .close{display:none;}
 
-main{margin:52px auto 100px;width:100%;max-width:1000px;box-sizing: border-box;background: #f7ece2;}
-.facility-info{width:100%;height:auto;padding:1rem;box-sizing: border-box;margin:0 auto}
-.facility-info h2{margin-bottom:1rem}
-.facility-info .infoBox{display:flex;flex-direction:column;align-items: center;}
+main{padding:52px 1rem 101px 1rem;margin:auto;width:100%;max-width:1000px;background: #f7ece2;box-sizing: border-box;}
+main h2{margin:1rem 0}
+.instructor-list{width:100%;height:100px;background: #fff;margin-bottom:1rem;box-sizing: border-box;border-radius:20px;padding:1rem;}
+.instructor-desc{display:flex;justify-content: space-between;height:100%;align-items: center;}
+.instructor-desc p{color:white}
+.instructor-desc ul{display:flex;flex-direction: column;justify-content: space-between;align-items: flex-end;height:100%;color:white;font-weight: bold;}
+.lebron{background: no-repeat 50% 20%/cover url(../images/lebron.jpeg);cursor:pointer}
+.curry{background: no-repeat 50% 15%/cover url(../images/curry.jpeg);cursor:pointer}
+.durant{background: no-repeat 50% 55%/cover url(../images/durant.jpeg);cursor:pointer}
+.luka{background: no-repeat center/cover url(../images/luka.jpeg);cursor:pointer}
+.kim{background: no-repeat center/cover url(../images/kim.jpeg);cursor:pointer}
 
-.infoImg{width:100%;border-radius: 20px;}
-.infoImg:after {content: "";display: block;padding-bottom: 100%;}
-.infoDesc{margin-right:auto;background: #fff;width:100%;border-radius: 20px;padding:1rem;box-sizing: border-box;}
-.infoDesc p{display:flex;line-height:2rem}
-.infoDesc strong{font-size:1.2rem;margin-right:auto}
-::-webkit-scrollbar {display: none; }
-.subBox{display:flex;justify-content: space-between;width:100%;margin:1rem auto}
-.subImg{width:30%;cursor:pointer;border-radius:20px}
-.subImg:after {content: "";display: block;padding-bottom: 100%;}
-
-.facility-map{padding:1rem;width:100%;height:auto}
-.facility-map h2{margin-bottom:1rem;color:rgb(29, 29, 31)}
-.map{width:100%;margin:auto;height:auto}
-.map iframe{border-radius:20px}
 
 .footer{position:fixed;bottom:0;left:0;width:100%;height:100px;background: white;border-top:1px solid #ddd}
 .footer .box{display:flex;justify-content: space-between;padding:0 1rem;box-sizing: border-box;align-items: center;height:100%;width:100%;max-width: 1000px;margin:auto}

@@ -1,4 +1,4 @@
-.athlete-info{width: 100%;padding:2rem 1rem 1rem 1rem;box-sizing: border-box;background: #6d33ff;height:300px;border-radius:0 0 20px 20px;margin-bottom:2rem;color:white;display:flex;flex-direction:column;justify-content: space-between;align-items: center;}
+.athlete-info{width: 100%;padding:2rem 1rem 1rem 1rem;box-sizing: border-box;background: #84a59d;height:300px;border-radius:0 0 20px 20px;margin-bottom:2rem;color:white;display:flex;flex-direction:column;justify-content: space-between;align-items: center;}
 .athlete-photo{width:120px;height: 120px;background-image: url(../images/victor.jpeg);background-size:100px;background-position:center;border-radius: 50%;}
 .info-list{display:flex;justify-content: space-between;width:70%}
 .info-icon{fill:white;width:30px;height:30px}
@@ -30,17 +30,19 @@
 .inner{position: absolute;width: 100%;height:100%;top:0;left:0}
 .list{width:48%;margin-bottom:1rem}
 ::-webkit-scrollbar {display: none; }
-h2{margin-bottom:1rem}
+h2{margin-bottom:1rem;font-weight:bold;color:rgb(29, 29, 31)}
 h3{font-weight:normal;margin-bottom:0.5rem}
-main{padding-bottom:100px;max-width:1000px;margin:52px auto 0}
+main{padding-bottom:100px;max-width:1000px;margin:52px auto 0;background: #f7ece2;}
+.ach-box{background: #fff;padding:1rem;box-sizing: border-box;border-radius: 20px;}
 
 .footer{position:fixed;bottom:0;left:0;width:100%;height:100px;background: white;border-top:1px solid #ddd}
 .footer .box{display:flex;justify-content: space-between;padding:0 1rem;box-sizing: border-box;align-items: center;height:100%;width:100%;max-width: 1000px;margin:auto}
 .box a{display:flex;flex-direction:column;align-items: center;}
-.footer .box .icon{fill:rgb(29, 29, 31);width:30px;height:30px}
+.footer .box .icon{fill:rgb(29, 29, 31);width:30px;height:30px;margin-bottom:0.5rem}
 
 html{font-size:14px;}
 body{font-family:'noto sans kr',sans-serif;color:rgb(29, 29, 31);letter-spacing:-0.05em;background: white;}
 p{line-height:1.6;}
 a{color: rgb(29, 29, 31);text-decoration: none;}
 table{text-align:center}
+.table-responsive{background: #fff;padding:1rem;box-sizing: border-box;border-radius: 20px;}
