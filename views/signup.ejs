@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+    <script src="js/gnb.js"></script>
+    <script src="dbcon.js"></script>
+    <script>
+        //회원가입 기능
+// function notice_check() {
+//     var u_id = document.getElementById("u_id");
+//     var pwd = document.getElementById("pwd");
+//     var pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+//     var repwd = document.getElementById("repwd");
+//     var birth = document.getElementById("birth");
+//     var birthcheck = /^(?=.*[0-9]).{8,8}$/g;
+//     var mobile = document.getElementById("mobile")
+//     var mobilecheck = /^(?=.*[0-9]).{10,11}$/g;
+//     if (u_id.value == "") {
+//         var txt = document.getElementById("err_id");
+//         txt.textContent = "*아이디를 입력해주세요";
+//         u_id.focus();
+//         return false;
+//     };
+//     if (pwd.value == "") {
+//         var txt = document.getElementById("err_pwd");
+//         txt.textContent = "*비밀번호를 입력해주세요";
+//         u_id.focus();
+//         return false;
+//     };
+//     if (!pwdCheck.test(pwd.value)) {
+//         var txt = document.getElementById("err_pwd")
+//         txt.textContent = "비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.";
+//         pwd.focus();
+//         return false;
+//     };
+//     if (repwd.value !== pwd.value) {
+//         var txt = document.getElementById("err_repwd");
+//         txt.textContent = "비밀번호가 다릅니다.";
+//         pwd.focus();
+//         return false;
+//     };
+//     if (!birthcheck.test(birth.value)) {
+//         var txt = document.getElementById("err_birth")
+//         txt.textContent = "8자리 숫자를 입력해주세요.";
+//         birth.focus();
+//         return false;
+//     };
+//     if (!mobilecheck.test(mobile.value)) {
+//         var txt = document.getElementById("err_mobile")
+//         txt.textContent = "10~11자리 숫자만 입력해주세요.";
+//         mobile.focus();
+//         return false;
+//     }
+// };
+// $(document).ready(function () {
+//     $('.id_search').click(function () {
+//         function id_search() {
+//             window.open("id_search.php", "", "width=600px,height=300px");
+//         };
+//         id_search();
+//     })
+// });
+
+    </script>
+</head>
+<body>
+    <%-include('header.ejs')%>
+    <main>
+        <img class="mainImg" src="../images/b-gang.jpeg" alt="">
+        <h2>Sign-Up</h2>
+        <form action="/write" name="join.form" method="post" onsubmit="return form_check()">
+            <fieldset class="contact-form">
+                <legend></legend>
+                <label for="">아이디</label><span class="text-box"><input type="text" id="u_id"></span>
+                <label for="">비밀번호</label><span class="text-box"><input type="text" id="pwd"></span>
+                <label for="">비밀번호 재확인</label><span class="text-box"><input type="text" id="repwd"></span>
+                <label for="">이름</label><span class="text-box"><input type="text" id="name"></span>
+                <label for="">생년월일</label>
+                <div class="birth-wrap">
+                    <span class="text-box"><input type="text" class="birth-box" placeholder="연도(4자)" id="year"></span>
+                    <span class="text-box"><select name="" id="month" class="birth-box">
+                        <option value="">월</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select></span>
+                    <span class="text-box"><input type="text" class="birth-box" placeholder="일(2자)" id="day"></span>
+                </div>
+                <label for="">성별</label><span class="text-box">
+                    <select name="" id="gender">
+                        <option value="">성별</option>
+                        <option value="m">남자</option>
+                        <option value="f">여자</option>
+                    </select>
+                </span>
+                <label for="">E-MAIL</label><span class="text-box"><input type="text" placeholder="선택입력"></span>
+                <label for="">휴대전화</label><span class="text-box"><select name="" id="">
+                    <option value="">대한민국 +82</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select></span>
+                <div class="mobile-wrap"><span class="text-box"><input type="text" placeholder="전화번호 입력" id="mobile"></span><span class="mobile-box">인증번호 받기</span></div>
+                <span class="text-box"><input type="text" placeholder="인증번호 입력"></span>
+                <label for="">학생 / 학부모</label><span class="text-box">
+                    <select name="" id="gender">
+                        <option value="">학생 / 학부모 선택</option>
+                        <option value="m">학생</option>
+                        <option value="f">학부모</option>
+                    </select>
+                </span>
+                <div class="btn-box">
+                <button>Prev</button>
+                <button>Submit</button>
+                </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <%-include('footer.ejs')%>
+</body>
+</html>
