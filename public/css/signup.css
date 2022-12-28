@@ -22,6 +22,7 @@ input[type="text"],select{width:100%;border:none;background:none;}
 .contact-form label{line-height:3rem;font-weight: bold;}
 *:focus{outline:0}
 .contact-form button{padding:1rem;background: #000;color:white;box-sizing: border-box;font-size:1.2rem;border-radius: 20px;box-sizing: border-box;width:45%}
+#sub-btn{padding:1rem;background: #000;color:white;box-sizing: border-box;font-size:1.2rem;border-radius: 20px;box-sizing: border-box;width:45%;border:none}
 .btn-box{display:flex;justify-content: space-between;width:100%;box-sizing: border-box;margin:2rem auto;}
 .btn-box button:first-child{background: #c9c9c9;}
 .sub-box{display:flex;margin-bottom:1rem}

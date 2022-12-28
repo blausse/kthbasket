@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('./signup.controller');
+const dbcon = require('../../dbcon');
+const qs = require('querystring');
 
-router.get('/',controller.signup);
+router.get('/',(req,res,next)=>{
+    res.render('signup',{title:'A'});
+});
 
 module.exports = router;

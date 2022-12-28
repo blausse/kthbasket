@@ -4,26 +4,21 @@ const port = 3001;
 const routes = require('./routes')
 const http = require('http').createServer(app)
 const io = require('socket.io')(http);
-const path = require('path')
-const bodyParser= require('body-parser')
-app.use(bodyParser.urlencoded({extended: true})) 
-// const static = require('serve-static')
+const path = require('path');
 
 app.set('view engine','ejs')
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 app.set('views',path.join(__dirname,'views'));
 
 app.use('/',routes);
-app.post('/write', function(req, res){
-    res.send('전송완료')
-  });
-// app.use('/',static(path.join(__dirname,'html')))
+
 app.use(express.static('public'))
 
+//채팅 기능
 let rooms = [];
-
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + 'index.html');
-// });
 
 io.on('connection', (socket)=>{
     socket.on('request_message', (msg) => {
@@ -79,11 +74,3 @@ function getUserCurrentRoom(socket){
 http.listen(port,()=>{
     console.log('express webserver start! :: 3001')
 })
-
-// app.get('/',(req,res)=>{
-//     res.send('안녕')
-// })
-
-// app.listen(port,()=>{
-//     console.log(`서버에 연결되었습니다. http://localhost:${port}`)
-// })

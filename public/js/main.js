@@ -93,7 +93,7 @@
 		{
 			// 3
 			type: 'sticky',
-			heightNum: 4,
+			heightNum: 3.5,
 			scrollHeight: 0,
 			objs: {
 				container: document.querySelector('#scroll-section-3'),

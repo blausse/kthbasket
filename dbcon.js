@@ -1,6 +1,6 @@
 const mysql = require('mysql');  // mysql 모듈 로드
-const id = document.querySelector('#u_id');
-const pwd = document.querySelector('#pwd');
+// const id = document.querySelector('#u_id');
+// const pwd = document.querySelector('#pwd');
 // const bodyParser= require('body-parser')
 
 const conn = {  // mysql 접속 설정
@@ -17,23 +17,23 @@ const conn = {  // mysql 접속 설정
 var connection = mysql.createConnection(conn); // DB 커넥션 생성
 connection.connect();   // DB 접속
  
-var testQuery = "INSERT INTO `members` (`username`,`password`) VALUES (`${id}`,`${pwd}`);";
+// var testQuery = "INSERT INTO `members` (`username`,`password`) VALUES ('test2','test2');";
  
-connection.query(testQuery, function (err, results, fields) { // testQuery 실행
-    if (err) {
-        console.log(err);
-    }
-    console.log(results);
-});
+// connection.query(testQuery, function (err, results, fields) { // testQuery 실행
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log(results);
+// });
  
-testQuery = "SELECT * FROM MEMBERS";
+// var testQuery = "SELECT * FROM MEMBERS";
  
-connection.query(testQuery, function (err, results, fields) { // testQuery 실행
-    if (err) {
-        console.log(err);
-    }
-    console.log(results);
-});
+// connection.query(testQuery, function (err, results, fields) { // testQuery 실행
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log(results);
+// });
  
  
-connection.end(); // DB 접속 종료
+module.exports = connection;
