@@ -16,7 +16,6 @@
         // 클라이언트에서 request_message 프로토콜로 id='m' 의 input 값을 보낸다.
         $(function(){
             const socket = io();
-        
         // 클라이언트에서 reuqest_message 프로토콜로 id='m' 의 input 값을 보낸다.
         $('#msg-send').click(() => {
           socket.emit('request_message', $('#m').val());
@@ -32,7 +31,7 @@
         });
 
         $('#room-msg-send').click(() => {
-          socket.emit('req_room_message', $('#room-message').val());
+          socket.emit('req_room_message', "<%=u_id%> : " + $('#room-message').val());
           $('#room-message').val('');
           return false;
         });
@@ -42,13 +41,17 @@
         });
 
         socket.on('noti_join_room', (res) => {
-          $('#room-messages').prepend($('<li>').text(res));
+          $('#room-messages').prepend($("<li class='notice-msg'>").text(res));
         });
 
         socket.on('noti_room_message', (res) => {
           $('#room-messages').prepend($('<li>').text(res));
+            if($('#room-messages li').eq(0).text().indexOf('<%=u_id%>') !== -1 ){
+                $('#room-messages li').eq(0).addClass('my-msg')
+            }else{
+                $('#room-messages li').eq(0).addClass('your-msg');
+            }
         });
-
         })
     </script>
     <title>KTH Basket</title>
@@ -75,7 +78,7 @@
         <ul class="menu">
             <li><a href="#none"><button>class</button></a></li>
             <li><a href="#none"><button>payment</button></a></li>
-            <li><a href="#none"><button>monthly report</button></a></li>
+            <li><a href="#none"><button>report</button></a></li>
         </ul>
         <div class="status content">
             <div class="class">
@@ -188,6 +191,17 @@
                                 <button id="select-room-button" class="btn btn-success" placeholder="message">Select</button>
                             </div>
                         </div>
+                        <!-- <form action="">
+                            <div class="input-group mb-1">
+                                <input type="text" class="form-control" id="room-message" autocomplete="off" />
+                                <div class="input-group-append">
+                                    <button id="room-msg-send" class="btn btn-primary" placeholder="message">Send</button>
+                                </div>
+                            </div>
+                        </form> -->
+                    </div>
+                    <div class="card-footer">
+                        <ul id="room-messages"></ul>
                         <form action="">
                             <div class="input-group mb-1">
                                 <input type="text" class="form-control" id="room-message" autocomplete="off" />
@@ -196,9 +210,6 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="card-footer">
-                        <ul id="room-messages"></ul>
                     </div>
                 </div>
             </div>

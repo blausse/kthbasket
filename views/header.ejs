@@ -13,8 +13,12 @@
         <li><a href="/facility">Facility</a></li>
         <li><a href="/instructor">Instructor</a></li>
         <li><a href="/contact">Contact</a></li>
+        <% if(!u_id){%>
         <li><a href="/login">Log-In</a></li>
         <li><a href="/signup">Sign-Up</a></li>
+        <%} else{%>
+        <li><a href="/logout">Log-Out</a></li>
+        <% };%>
     </ul>
     </div>
 </header>

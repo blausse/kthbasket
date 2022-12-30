@@ -1,3 +1,3 @@
 exports.athlete = (req,res,next)=>{
-    res.render('athlete',{title:'I'});
+    res.render('athlete',{u_id:''});
 }

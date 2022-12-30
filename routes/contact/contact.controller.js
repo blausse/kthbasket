@@ -1,3 +1,3 @@
 exports.contact = (req,res,next)=>{
-    res.render('contact',{title:'H'});
+    res.render('contact',{u_id:''});
 }

@@ -26,11 +26,10 @@
                     },
                     dataType:'json',
                     success:function(data){
-                        alert("환영합니다!");
                         location.href="/";
                     },
                     error:function(err){
-                        alert("보내기 실패"+err)
+                        alert(err)
                     }
                 })
             })

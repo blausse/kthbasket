@@ -1,3 +1,3 @@
 exports.instructor = (req,res,next)=>{
-    res.render('instructor',{title:'F'});
+    res.render('instructor',{u_id:''});
 }

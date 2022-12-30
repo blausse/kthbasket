@@ -12,7 +12,7 @@
 .close{display:none;}
 
 
-main{max-width:1000px;background: #f7ece2;width:100%;height:2000px;box-sizing: border-box;margin:52px auto 0}
+main{max-width:1000px;background: #f7ece2;width:100%;height:auto;box-sizing: border-box;margin:52px auto 0;padding-bottom:101px}
 .athlete-info{width: 100%;padding:2rem 1rem 1rem 1rem;box-sizing: border-box;background: #fc9200;height:300px;border-radius:0 0 20px 20px;margin-bottom:2rem;color:white;display:flex;flex-direction:column;justify-content: space-between;align-items: center;}
 .athlete-photo{width:120px;height: 120px;background-image: url(../images/victor.jpeg);background-size:100px;background-position:center;border-radius: 50%;}
 .info-list{display:flex;justify-content: space-between;width:70%}
@@ -41,6 +41,7 @@ main{max-width:1000px;background: #f7ece2;width:100%;height:2000px;box-sizing: b
 .monthly-report button:hover{color:blue}
 .monthly-report button{margin-bottom:0.5rem}
 .report{display:none}
+.attend h2{margin:1rem 0}
 
 .classList{padding:0 1rem;margin-bottom:1rem}
 .classList h2{margin-bottom:1rem}
@@ -51,8 +52,11 @@ main{max-width:1000px;background: #f7ece2;width:100%;height:2000px;box-sizing: b
 
 .attend{padding:0 1rem;}
 .chat{padding:0 1rem;}
+.chat h2{margin:1rem 0}
 
-.footer{position:fixed;bottom:0;left:0;width:100%;height:100px;background: white;border-top:1px solid #ddd}
+#others-chat{margin-bottom:1rem}
+
+.footer{position:fixed;bottom:0;left:0;width:100%;height:100px;background: white;border-top:1px solid #ddd;z-index:10}
 .footer .box{display:flex;justify-content: space-between;padding:0 1rem;box-sizing: border-box;align-items: center;height:100%;width:100%;max-width: 1000px;margin:auto}
 .footer .box a{display:flex;flex-direction:column;align-items: center;}
 .footer .box .icon{fill:rgb(29, 29, 31);width:30px;height:30px;margin-bottom:0.5rem}
@@ -62,6 +66,13 @@ body{font-family:'noto sans kr',sans-serif;color:rgb(29, 29, 31);letter-spacing:
 p{line-height:1.6;}
 a{color: rgb(29, 29, 31);text-decoration: none !important}
 table{text-align:center}
+
+.card .card-footer #room-messages{display:flex;flex-direction: column-reverse;height:100%;overflow:scroll;box-sizing: border-box;margin:1rem 0}
+.card-footer{background: #9bbbd4;height:500px;display:flex;flex-direction: column;justify-content: space-between;}
+.my-msg{padding:10px;background: #fef01b;color:rgb(29, 29, 31);width:auto;border-radius: 20px;margin:5px 0 5px auto}
+.your-msg{padding:10px;background: #fff;color:rgb(29, 29, 31);width:auto;border-radius:20px;margin:5px auto 5px 0}
+.notice-msg{text-align:center;margin:10px auto;}
+
 
 @media(min-width:1024px){
 }

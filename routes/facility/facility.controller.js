@@ -1,3 +1,3 @@
 exports.facility = (req,res,next)=>{
-    res.render('facility',{title:'G'});
+    res.render('facility',{u_id:''});
 }

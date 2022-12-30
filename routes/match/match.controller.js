@@ -1,3 +1,3 @@
 exports.match = (req,res,next)=>{
-    res.render('match',{title:'C'});
+    res.render('match',{u_id:''});
 }

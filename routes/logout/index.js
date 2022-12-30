@@ -17,8 +17,8 @@ router.use(session({
 }));
 
 router.get('/',(req,res,next)=>{
-    console.log(req.session.s_id);
-    res.render('index',{u_id : req.session.s_id});
+    req.session.destroy();
+    res.redirect('/');
 })
 
 module.exports = router;

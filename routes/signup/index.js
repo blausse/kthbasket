@@ -4,7 +4,7 @@ const dbcon = require('../../dbcon');
 const qs = require('querystring');
 
 router.get('/',(req,res,next)=>{
-    res.render('signup',{title:'A'});
+    res.render('signup',{u_id:''});
 });
 
 module.exports = router;
