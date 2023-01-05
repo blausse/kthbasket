@@ -1,5 +1,5 @@
 .athlete-info{width: 100%;padding:2rem 1rem 1rem 1rem;box-sizing: border-box;background: #84a59d;height:300px;border-radius:0 0 20px 20px;margin-bottom:2rem;color:white;display:flex;flex-direction:column;justify-content: space-between;align-items: center;}
-.athlete-photo{width:120px;height: 120px;background-image: url(../images/victor.jpeg);background-size:100px;background-position:center;border-radius: 50%;}
+.athlete-photo{width:120px;height: 120px;background-image: url(/images/victor.jpeg);background-size:100px;background-position:center;border-radius: 50%;}
 .info-list{display:flex;justify-content: space-between;width:70%}
 .info-icon{fill:white;width:30px;height:30px}
 .athlete{font-size:1.5rem;}

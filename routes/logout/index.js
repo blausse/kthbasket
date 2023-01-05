@@ -19,6 +19,7 @@ router.use(session({
 router.get('/',(req,res,next)=>{
     req.session.destroy();
     res.redirect('/');
+    // next('/routes')
 })
 
 module.exports = router;
